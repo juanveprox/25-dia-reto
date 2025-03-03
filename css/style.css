@@ -1,0 +1,379 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: "Inter", serif;
+}
+
+.carrusel{
+    overflow: hidden;
+    position: relative;
+}
+
+.carrusel__redes{
+    position: fixed;
+    top:40%;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    background-color: #131315;
+}
+
+
+.redes__link{
+    padding:.7rem; 
+}
+.redes__link:hover{
+    background-color:#3a3939 ;
+}
+
+.link__iconos{
+    fill: #ffffff;
+}
+
+.redes__link:hover .link__iconos{
+    fill: #8f8b8b;
+}
+
+.carrusel__imagenes {
+    display: flex;
+    flex-direction: row;
+    transition:  all 1.5s ease-in-out;
+}
+
+.imagenes__contenedor {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.contenedor__titulo{
+    font-family: "Permanent Marker", serif;
+    font-weight: 400;
+    position: absolute;
+}
+
+.contenedor__titulo--1{
+    font-size: 8rem;
+    color: #FCCF4D;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-text-stroke:5px #000;
+}
+
+.contenedor__titulo--2{
+    font-size: 5rem;
+    color: #FFFFFF;
+    -webkit-text-stroke:3px #000;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -0%);
+}
+
+.contenedor__titulo--3{
+    font-size: 6rem;
+    color: #000000;
+    -webkit-text-stroke:3px #ffffff;
+    left: 5%;
+}
+
+.contenedor__imagenes {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+}
+
+.contenedor__imagenes--2{
+    object-position: center 10%;
+}
+
+.contenedor__imagenes--3{
+    object-position: center 20%;
+}
+
+.carrusel__botones{
+    position: absolute;
+    top: 99%;
+    left: 50%;
+    transform: translate(-50%, -99%);
+    display: flex;
+    column-gap: .6rem;
+    width: max-content;
+}
+
+.botones__boton{
+    width: .8rem;
+    height: .8rem;
+    border-radius: 50%;
+    background-color: #7c7777;
+    cursor: pointer;
+}
+
+.activo{
+    background-color: #c5c1c1;
+}
+
+.nuevo{
+    background-color: #131315;
+    padding:3rem 4rem;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.nuevo__titulo{
+    font-size: 3.5rem;
+    color: #fff;
+    z-index: 50;
+    margin: 1rem 3rem;
+}
+
+.titulo__sub{
+    color: #131315;
+    position: relative;
+}
+.titulo__sub::after{
+    content:"";
+    background-color: #FCCF4D;
+    width: 150%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left:-5%;
+    z-index: -10;
+}
+
+.nuevo__parrafo{
+    color: #fff;
+    font-size: 1.3rem;
+    text-align: right;
+    position: relative;
+}
+
+.nuevo__parrafo::after{
+    content: "";
+    width: 50%;
+    height: .2rem;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    background-color: #FCCF4D;
+}
+
+.eventos{
+    background-color: #1B1B1B;
+    padding: 2rem 3rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.eventos .eventos__evento:nth-child(odd){
+    background-color: #d9d9d932;
+}
+
+.eventos__evento{
+    padding: 2rem 1rem;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #FCCF4D;
+}
+
+.evento__datos{
+    display: flex;
+    flex-direction: column;
+    row-gap: .3rem;
+}
+
+.datos__fecha{
+    font-family: "Permanent Marker", serif;
+    font-size: 1.3rem;
+    color: #e4e4e4f1;
+}
+
+.datos__lugar,.datos__lugar-Exacto{
+    font-size: .8rem;
+}
+
+.evento__boton{
+    border: 2px solid #FCCF4D;
+    background-color: transparent;
+    padding: .6rem 1.1rem ;
+    font-family: "Permanent Marker", serif;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.evento__boton:hover{
+    
+    color: #ffffff91;
+    border: 2px solid #fcd04d83;
+}
+
+.suscribirse{
+    padding: 3rem 4rem;
+    background-color: #131315;
+    overflow: hidden;
+}
+
+.suscribirse__titulo{
+    font-size: 2.2rem;
+    color: #fff;
+}
+
+.suscribirse__contenedor-susb{
+    margin: 1rem 0;
+    padding: 3rem;
+    width: 90%;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    column-gap: 1.5rem;
+    position: relative;
+    z-index: 20;
+}
+
+.suscribirse__contenedor-susb::after{
+    content: "";
+    background-color: #FCCF4D;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 15%;
+    top: 0;
+    z-index: -10;
+
+}
+
+.contenedor-susb__input{
+    font-size: 1.5rem;
+    border: 2px solid #000;
+    min-height: 3rem;
+    width: 50%;
+    padding: 0 .5rem;
+}
+
+.contenedor-susb__input::placeholder{
+    padding: 0 .5rem;
+}
+
+.contenedor-susb__boton{
+    font-size: 1.2rem;
+    font-family: "Permanent Marker", serif;
+    color: #FFFFFF;
+    background-color: transparent;
+    border: 2px solid #000000;
+    padding: .5rem .7rem;
+    cursor: pointer;
+    -webkit-text-stroke:.8px #000000;
+}
+
+.contenedor-susb__boton:hover{
+    
+    color: #dfdddd;
+    border: 2px solid #535252;
+    -webkit-text-stroke:.8px #535252;
+}
+
+.suscribirse__parrafo{
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: right;
+    margin-top: 2rem;
+}
+
+.footer{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+}
+
+.footer__info{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.footer__info a{
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.footer__creado{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+@media screen and (max-width:767px){
+    .contenedor__titulo--1{
+        font-size: 4rem;
+    }
+    
+    .contenedor__titulo--2{
+        font-size: 3rem;
+    }
+    
+    .contenedor__titulo--3{
+        font-size: 4rem;
+    }
+
+    .nuevo__titulo{
+        font-size: 2.5rem;
+        margin: 1rem;
+    }
+    
+    .nuevo__parrafo{
+        font-size: 1rem;
+    }
+
+    .eventos{
+        padding: 2rem 1rem;
+    }
+    .eventos__evento{
+        flex-direction: column;
+        text-align: center;
+        row-gap: 1rem;
+    }
+
+    .suscribirse{
+        padding: 3rem;
+    }
+    
+    .suscribirse__titulo{
+        font-size: 1.5rem;
+    }
+
+    .suscribirse__contenedor-susb{
+        margin: 1rem auto;
+        padding-right: 0; 
+        width: 100%;
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+    
+    .suscribirse__contenedor-susb::after{
+        width: 150%;
+        height: 100%;
+        left: 0%;
+        top: 0;
+    }
+    
+    .contenedor-susb__input{
+        width: 100%;
+    }
+    .suscribirse__parrafo{
+        font-size: 1rem;
+    }
+}
